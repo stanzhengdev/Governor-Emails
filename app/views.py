@@ -1,5 +1,5 @@
-from app import app, models, db
-from flask import Blueprint, jsonify, Response, request
+from app import models, db
+# from flask import Blueprint, jsonify, Response, request
 
 # # url redirect
 # @app.route('/', methods=['GET'])
