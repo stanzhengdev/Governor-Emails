@@ -9,4 +9,8 @@ app.config.from_object('config.BaseConfig')
 print app.config['SQLALCHEMY_DATABASE_URI']
 db = SQLAlchemy(app)
 
-from app import views
+from app import views, models
+from app.admin import UrlView
+
+adminify = Admin(app)
+adminify.add_view(UrlView(models.Email, db.session))
